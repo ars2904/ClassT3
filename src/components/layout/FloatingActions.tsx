@@ -1,25 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { MessageCircle, Phone, ArrowUp, Calendar } from "lucide-react";
+import React, { useState } from "react";
+import { MessageCircle, Phone, Calendar } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import DemoModal from "@/components/ui/DemoModal";
 
 export default function FloatingActions() {
-  const [showScrollTop, setShowScrollTop] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
     siteConfig.whatsappMessage
@@ -29,16 +16,6 @@ export default function FloatingActions() {
     <>
       {/* Floating Buttons on Desktop (Bottom Right) */}
       <div className="fixed bottom-6 right-6 z-40 hidden md:flex flex-col gap-3">
-        {showScrollTop && (
-          <button
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-            className="w-12 h-12 bg-white/90 backdrop-blur border border-slate-200 text-slate-700 hover:text-brand-700 hover:border-brand-300 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-105 active:scale-95"
-          >
-            <ArrowUp className="w-5 h-5" />
-          </button>
-        )}
-
         {/* WhatsApp Floating Button */}
         <a
           href={whatsappUrl}

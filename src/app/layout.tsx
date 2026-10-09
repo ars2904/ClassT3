@@ -3,6 +3,7 @@ import "./globals.css";
 import { siteConfig } from "@/config/site";
 import LayoutShell from "@/components/layout/LayoutShell";
 import TierSwitcher from "@/components/tier-switcher/TierSwitcher";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} | ${siteConfig.tagline}`,
@@ -44,6 +45,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 pb-16 md:pb-0">
         <TierSwitcher />
+        <ScrollToTop />
         <LayoutShell>{children}</LayoutShell>
       </body>
     </html>

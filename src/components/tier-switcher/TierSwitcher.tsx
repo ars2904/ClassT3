@@ -47,7 +47,7 @@ export default function TierSwitcher() {
     : tiers[2];
 
   return (
-    <div className="fixed bottom-16 sm:bottom-6 right-3 sm:right-auto sm:left-6 z-50">
+    <div className="fixed bottom-16 sm:bottom-6 left-3 sm:left-6 z-50">
       {/* Dropdown Popover */}
       {open && (
         <div className="fixed sm:absolute inset-x-4 sm:inset-x-auto bottom-20 sm:bottom-14 sm:left-0 sm:w-96 bg-slate-950/98 backdrop-blur-2xl border border-slate-700 rounded-3xl shadow-2xl p-4 text-white animate-fadeIn mb-2 max-w-sm sm:max-w-none mx-auto sm:mx-0">
