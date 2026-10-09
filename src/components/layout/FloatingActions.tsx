@@ -58,33 +58,33 @@ export default function FloatingActions() {
         </a>
       </div>
 
-      {/* Mobile Sticky Bottom Conversion Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2.5 shadow-[0_-5px_20px_rgba(0,0,0,0.08)]">
+      {/* Mobile Sticky Bottom Conversion Bar - Styled in Oxford Navy & Gold */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-navy-950/95 backdrop-blur-md border-t border-gold-500/40 px-3 py-2 shadow-[0_-8px_25px_rgba(0,0,0,0.35)]">
         <div className="grid grid-cols-3 gap-2">
           <a
             href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
-            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-slate-100 text-slate-800 text-[11px] font-bold active:bg-slate-200 transition-colors"
+            className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-lg bg-navy-900 border border-gold-500/30 text-slate-100 text-xs font-bold active:bg-navy-800 transition-colors"
           >
-            <Phone className="w-4 h-4 text-brand-700 mb-0.5" />
-            <span>Call Now</span>
+            <Phone className="w-3.5 h-3.5 text-gold-400" />
+            <span>Call</span>
           </a>
 
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-emerald-500 text-white text-[11px] font-bold active:bg-emerald-600 transition-colors shadow-sm"
+            className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold active:bg-emerald-700 transition-colors shadow-sm"
           >
-            <MessageCircle className="w-4 h-4 text-white mb-0.5" />
+            <MessageCircle className="w-3.5 h-3.5" />
             <span>WhatsApp</span>
           </a>
 
           <button
             onClick={() => setDemoOpen(true)}
-            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-gradient-to-r from-brand-700 to-indigo-700 text-white text-[11px] font-bold active:opacity-90 transition-opacity shadow-sm"
+            className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 text-xs font-black uppercase tracking-wider active:bg-gold-300 transition-colors shadow-md"
           >
-            <Calendar className="w-4 h-4 text-amber-300 mb-0.5" />
-            <span>Free Demo</span>
+            <Calendar className="w-3.5 h-3.5" />
+            <span>Book Demo</span>
           </button>
         </div>
       </div>

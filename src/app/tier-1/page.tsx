@@ -149,59 +149,59 @@ export default function Tier1SoloTutorPage() {
       </div>
 
       {/* Hero Section: WARM, LIGHT, HIGH-CONTRAST & APPROACHABLE */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-ivory-100 to-ivory-200/70 border-b border-slate-200">
+      <section className="py-10 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-ivory-100 to-ivory-200/70 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <span className="inline-block px-3.5 py-1 rounded-full bg-navy-900 text-gold-400 text-xs font-bold uppercase tracking-widest shadow-xs">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
+              <span className="inline-block px-3 py-1 rounded-full bg-navy-900 text-gold-400 text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest shadow-xs">
                 ✦ Neighborhood Home Tuition • Max 10 Students
               </span>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight text-navy-900 leading-[1.2]">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight text-navy-900 leading-[1.25]">
                 Mathematics & Science Made Simple By A Mentor Who{" "}
                 <span className="text-gold-600 italic font-serif">Personally Teaches</span> Every Class.
               </h2>
 
-              <p className="text-slate-700 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans">
+              <p className="text-slate-700 text-xs sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans">
                 {soloTutorData.personalPromise}
               </p>
 
               {/* 4 Clean Value Pills on White */}
-              <div className="grid grid-cols-2 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left text-xs font-semibold text-slate-800">
-                <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold-600 flex-shrink-0" />
-                  <span>Max 10 Students Per Batch</span>
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-1 sm:pt-2 max-w-lg mx-auto lg:mx-0 text-left text-[11px] sm:text-xs font-semibold text-slate-800">
+                <div className="p-2.5 sm:p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-600 flex-shrink-0" />
+                  <span>Max 10 Per Batch</span>
                 </div>
-                <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold-600 flex-shrink-0" />
-                  <span>School NCERT & Homework Help</span>
+                <div className="p-2.5 sm:p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-600 flex-shrink-0" />
+                  <span>NCERT & Homework</span>
                 </div>
-                <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold-600 flex-shrink-0" />
-                  <span>Weekly Sunday Written Tests</span>
+                <div className="p-2.5 sm:p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-600 flex-shrink-0" />
+                  <span>Sunday Written Tests</span>
                 </div>
-                <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold-600 flex-shrink-0" />
-                  <span>Direct Monthly Parent Calls</span>
+                <div className="p-2.5 sm:p-3 bg-white rounded-lg border border-slate-200 shadow-xs flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-600 flex-shrink-0" />
+                  <span>Direct Parent Calls</span>
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+              {/* Action Buttons - 2 column on mobile */}
+              <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:items-center sm:justify-center lg:sm:justify-start sm:gap-4 pt-2 sm:pt-3">
                 <button
                   onClick={() => whatsappDirect()}
-                  className="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded transition-all shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded transition-all shadow-md flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Chat With Sir on WhatsApp</span>
+                  <span>WhatsApp Sir</span>
                 </button>
 
                 <a
                   href="#book-demo"
-                  className="w-full sm:w-auto px-7 py-4 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider rounded transition-all shadow-md text-center"
+                  className="w-full sm:w-auto px-4 sm:px-7 py-3 sm:py-4 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider rounded transition-all shadow-md text-center flex items-center justify-center"
                 >
-                  Book 2 Free Trial Classes
+                  Book 2 Trials
                 </a>
               </div>
             </div>

@@ -76,17 +76,17 @@ export default function Navbar() {
       {/* Main Prestigious Academic Navbar */}
       <header className="sticky top-0 z-40 bg-navy-900 border-b-2 border-gold-500 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-lg bg-navy-950 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow group-hover:border-gold-400 transition-colors">
-                <GraduationCap className="w-7 h-7" />
+            <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-navy-950 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow group-hover:border-gold-400 transition-colors flex-shrink-0">
+                <GraduationCap className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-white leading-tight">
+                <span className="text-lg sm:text-2xl font-bold font-display tracking-tight text-white leading-tight">
                   {siteConfig.shortName}
                 </span>
-                <span className="text-[10px] font-bold text-gold-400 tracking-widest uppercase">
+                <span className="text-[9px] sm:text-[10px] font-bold text-gold-400 tracking-wider sm:tracking-widest uppercase line-clamp-1">
                   Academy of Excellence • Estd. {siteConfig.foundedYear}
                 </span>
               </div>
@@ -115,7 +115,7 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* CTA Button */}
+            {/* CTA Button Desktop */}
             <div className="hidden md:flex items-center gap-3">
               <button
                 onClick={() => setDemoModalOpen(true)}
@@ -125,20 +125,22 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Mobile Hamburger */}
-            <div className="flex items-center gap-2 lg:hidden">
-              <button
-                onClick={() => setDemoModalOpen(true)}
-                className="px-3 py-1.5 text-xs font-bold bg-gold-500 text-navy-950 rounded uppercase"
+            {/* Mobile Actions: Clean Quick Call + Hamburger */}
+            <div className="flex items-center gap-1.5 lg:hidden">
+              <a
+                href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
+                aria-label="Call Helpline"
+                className="p-2 text-gold-400 hover:text-gold-300 rounded-lg bg-navy-950/70 border border-gold-500/30"
               >
-                Demo Class
-              </button>
+                <Phone className="w-4 h-4" />
+              </a>
+
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle navigation"
-                className="p-2 text-slate-200 hover:text-white"
+                className="p-2 text-slate-200 hover:text-white rounded-lg bg-navy-950/70 border border-navy-800"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>

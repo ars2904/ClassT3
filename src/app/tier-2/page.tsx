@@ -75,60 +75,60 @@ export default function Tier2HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center space-y-7">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/50 bg-navy-950/70 backdrop-blur-md text-gold-300 text-xs font-bold uppercase tracking-widest shadow-md">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-24 text-center space-y-4 sm:space-y-6 lg:space-y-7">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-gold-500/50 bg-navy-950/70 backdrop-blur-md text-gold-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest shadow-md">
             <Sparkles className="w-3.5 h-3.5 text-gold-400" />
             <span>Admissions Open 2025–26 • Sector 15 Centre</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-[1.18] drop-shadow-md">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-display tracking-tight text-white leading-[1.25] sm:leading-[1.18] drop-shadow-md">
             Quality Coaching For School Excellence &{" "}
             <span className="text-gold-400 italic font-serif">Board Merit</span>.
           </h1>
 
-          <p className="text-slate-200 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-sans">
+          <p className="text-slate-200 text-xs sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-sans line-clamp-3 sm:line-clamp-none">
             Personalized 14-student batches, dedicated 3-mentor team for Maths, Science & Physics, and weekly diagnostic testing for Classes 8th to 12th.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:items-center sm:justify-center sm:gap-4 pt-2 sm:pt-4">
             <Link
               href="/tier-2/contact#demo"
-              className="w-full sm:w-auto px-8 py-4 rounded bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-xl shadow-gold-500/30 transform hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 rounded bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-xl shadow-gold-500/30 text-center"
             >
-              Book Free Demo Class
+              Book Free Demo
             </Link>
 
             <Link
               href="/tier-2/batches"
-              className="w-full sm:w-auto px-8 py-4 rounded border-2 border-white/70 hover:border-white text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition-all hover:bg-white/10 backdrop-blur-xs"
+              className="w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 rounded border-2 border-white/70 hover:border-white text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition-all hover:bg-white/10 backdrop-blur-xs text-center"
             >
-              View Batches & Timetable
+              Batches & Fees
             </Link>
 
             <a
               href={`tel:${tier2Data.phone.replace(/[^0-9+]/g, "")}`}
-              className="w-full sm:w-auto px-6 py-4 rounded border border-navy-700 bg-navy-950/80 text-slate-200 hover:text-white font-medium text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
+              className="hidden sm:flex sm:w-auto px-6 py-4 rounded border border-navy-700 bg-navy-950/80 text-slate-200 hover:text-white font-medium text-xs sm:text-sm uppercase tracking-wider transition-all items-center justify-center gap-2 backdrop-blur-sm"
             >
               <Phone className="w-4 h-4 text-gold-400" />
               <span>Call Helpline</span>
             </a>
           </div>
 
-          <div className="pt-8 border-t border-white/15 max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-semibold text-slate-200 backdrop-blur-xs">
+          <div className="pt-6 sm:pt-8 border-t border-white/15 max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 text-[11px] sm:text-xs font-semibold text-slate-200 backdrop-blur-xs">
             <div className="flex items-center justify-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-gold-400 flex-shrink-0" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
               <span>Classes 8th to 12th</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-gold-400 flex-shrink-0" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
               <span>Max 14 Per Batch</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-gold-400 flex-shrink-0" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
               <span>Weekly Sunday Tests</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-gold-400 flex-shrink-0" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
               <span>AC Smart Classrooms</span>
             </div>
           </div>

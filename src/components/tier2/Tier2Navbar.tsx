@@ -53,17 +53,17 @@ export default function Tier2Navbar() {
       {/* Main Navbar */}
       <header className="sticky top-0 z-40 bg-navy-900 border-b-2 border-gold-500 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <Link href="/tier-2" className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-lg bg-navy-950 border border-gold-500/40 text-gold-400 flex items-center justify-center font-bold shadow">
+            <Link href="/tier-2" className="flex items-center gap-2.5 sm:gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-navy-950 border border-gold-500/40 text-gold-400 flex items-center justify-center font-bold shadow flex-shrink-0">
                 <GraduationCap className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xl font-bold font-display text-white block leading-tight">
+                <span className="text-lg sm:text-xl font-bold font-display text-white block leading-tight">
                   {tier2Data.name}
                 </span>
-                <span className="text-[10px] font-bold text-gold-400 uppercase tracking-widest">
+                <span className="text-[9px] sm:text-[10px] font-bold text-gold-400 uppercase tracking-wider sm:tracking-widest">
                   Quality Neighborhood Coaching
                 </span>
               </div>
@@ -89,7 +89,7 @@ export default function Tier2Navbar() {
               })}
             </nav>
 
-            {/* CTA */}
+            {/* CTA Desktop */}
             <div className="hidden sm:flex items-center gap-3">
               <Link
                 href="/tier-2/contact#demo"
@@ -99,14 +99,24 @@ export default function Tier2Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Hamburger */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 text-slate-200"
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile Actions: Phone + Hamburger */}
+            <div className="flex items-center gap-1.5 md:hidden">
+              <a
+                href={`tel:${tier2Data.phone.replace(/[^0-9+]/g, "")}`}
+                aria-label="Call Helpline"
+                className="p-2 text-gold-400 hover:text-gold-300 rounded-lg bg-navy-950/70 border border-gold-500/30"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
+
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className="p-2 text-slate-200 hover:text-white rounded-lg bg-navy-950/70 border border-navy-800"
+                aria-label="Toggle menu"
+              >
+                {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
           </div>
         </div>
 
