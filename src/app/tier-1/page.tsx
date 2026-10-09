@@ -67,18 +67,20 @@ export default function Tier1SoloTutorPage() {
   return (
     <div className="bg-ivory-50 min-h-screen text-slate-900 font-sans">
       {/* Top Urgent Bar */}
-      <div className="bg-navy-950 text-slate-300 text-xs py-2.5 px-4 border-b border-navy-800">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-center sm:text-left">
-            <span className="inline-flex items-center gap-1 bg-gold-500 text-navy-950 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider">
+      <div className="bg-navy-950 text-slate-300 text-xs py-2 px-3 sm:px-4 border-b border-navy-800">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          {/* Badge & Notice */}
+          <div className="flex items-center gap-1.5 sm:gap-2 truncate text-[11px] sm:text-xs">
+            <span className="inline-flex items-center gap-1 bg-gold-500 text-navy-950 font-bold px-1.5 sm:px-2 py-0.5 rounded text-[9px] sm:text-[10px] uppercase tracking-wider shrink-0">
               <Sparkles className="w-3 h-3" /> Batch 2025–26
             </span>
-            <span className="text-slate-200">
-              Only 2 seats left in Class 10 & 12 • Max 10 Students Per Batch
+            <span className="text-slate-300 truncate">
+              Only 2 seats left in Class 10 & 12 • Max 10 Per Batch
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-xs">
+          {/* Quick Helpline on Desktop */}
+          <div className="hidden sm:flex items-center gap-3 text-xs shrink-0">
             <a
               href={`tel:${soloTutorData.phone.replace(/[^0-9+]/g, "")}`}
               className="text-slate-200 hover:text-gold-400 font-semibold flex items-center gap-1.5 transition-colors"
@@ -100,51 +102,87 @@ export default function Tier1SoloTutorPage() {
 
       {/* Main Dignified Academic Header */}
       <header className="sticky top-0 z-40 bg-navy-900 border-b-2 border-gold-500 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-lg bg-navy-950 border border-gold-500/40 text-gold-400 flex items-center justify-center font-bold text-xl font-display shadow">
-              <GraduationCap className="w-6 h-6" />
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-3">
+          {/* Logo & Mentor Tagline */}
+          <div className="flex items-center gap-2.5 sm:gap-3.5 min-w-0">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-navy-950 border border-gold-500/40 text-gold-400 flex items-center justify-center font-bold text-lg sm:text-xl font-display shadow shrink-0">
+              <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <h1 className="text-lg sm:text-xl font-bold font-display text-white leading-tight">
+            <div className="min-w-0">
+              <h1 className="text-base sm:text-xl font-bold font-display text-white leading-tight truncate">
                 {soloTutorData.tuitionName}
               </h1>
-              <p className="text-[11px] font-bold text-gold-400 tracking-wider uppercase">
+              <p className="text-[9px] sm:text-[11px] font-bold text-gold-400 tracking-wider uppercase truncate">
                 Mentored by {soloTutorData.tutorName} • {soloTutorData.qualifications}
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          {/* Header Action Buttons */}
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            {/* Quick Call icon on mobile */}
+            <a
+              href={`tel:${soloTutorData.phone.replace(/[^0-9+]/g, "")}`}
+              aria-label="Call Sir"
+              className="sm:hidden p-2 text-gold-400 hover:text-gold-300 rounded-lg bg-navy-950/70 border border-gold-500/30"
+            >
+              <Phone className="w-4 h-4" />
+            </a>
+
             <a
               href="#book-demo"
               className="hidden sm:inline-block px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded text-xs uppercase tracking-wider font-semibold border border-white/20 transition-colors"
             >
               Book Trial
             </a>
+
             <button
               onClick={() => whatsappDirect()}
-              className="px-4 py-2 bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs uppercase tracking-wider rounded transition-all shadow-md shadow-gold-500/20"
+              className="px-3 sm:px-4 py-2 bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs uppercase tracking-wider rounded transition-all shadow-md shadow-gold-500/20 flex items-center gap-1"
             >
-              WhatsApp Sir
+              <MessageCircle className="w-3.5 h-3.5 sm:hidden" />
+              <span className="hidden sm:inline">WhatsApp Sir</span>
+              <span className="sm:hidden">WhatsApp</span>
             </button>
           </div>
         </div>
       </header>
 
-      {/* Quick Anchor Subnav */}
-      <div className="bg-white border-b border-slate-200 py-3 px-4 shadow-2xs">
-        <div className="max-w-7xl mx-auto flex items-center justify-center sm:justify-start gap-6 sm:gap-8 text-xs font-bold uppercase tracking-wider text-slate-600 overflow-x-auto no-scrollbar">
-          <a href="#about" className="hover:text-gold-600 whitespace-nowrap">About Sir</a>
-          <a href="#methodology" className="hover:text-gold-600 whitespace-nowrap">Methodology</a>
-          <a href="#comparison" className="hover:text-gold-600 whitespace-nowrap">Why Solo Mentor</a>
-          <a href="#timetable" className="hover:text-gold-600 whitespace-nowrap">Batch Timetable</a>
-          <a href="#fees" className="hover:text-gold-600 whitespace-nowrap">Monthly Fees</a>
-          <a href="#results" className="hover:text-gold-600 whitespace-nowrap">Board Toppers</a>
-          <a href="#reviews" className="hover:text-gold-600 whitespace-nowrap">Parent Reviews</a>
-          <a href="#moments" className="hover:text-gold-600 whitespace-nowrap">Life at Academy</a>
-          <a href="#faqs" className="hover:text-gold-600 whitespace-nowrap">FAQs</a>
-          <a href="#book-demo" className="text-gold-600 hover:underline whitespace-nowrap">Free Trial Class</a>
+      {/* Sleek Horizontal Anchor Subnav with Gradient Fade */}
+      <div className="bg-white border-b border-slate-200 sticky top-16 sm:top-20 z-30 shadow-xs">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4">
+          <nav className="flex items-center gap-4 sm:gap-6 text-xs font-semibold uppercase tracking-wider text-slate-600 overflow-x-auto no-scrollbar py-2.5 scroll-smooth">
+            <a href="#about" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              About Sir
+            </a>
+            <a href="#methodology" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              Methodology
+            </a>
+            <a href="#comparison" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              Why Solo Mentor
+            </a>
+            <a href="#timetable" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              Batch Timetable
+            </a>
+            <a href="#fees" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              Monthly Fees
+            </a>
+            <a href="#results" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              Board Toppers
+            </a>
+            <a href="#reviews" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              Parent Reviews
+            </a>
+            <a href="#moments" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              Life at Academy
+            </a>
+            <a href="#faqs" className="hover:text-gold-600 hover:border-gold-500 border-b-2 border-transparent pb-1 whitespace-nowrap transition-colors">
+              FAQs
+            </a>
+            <a href="#book-demo" className="text-gold-600 font-bold hover:text-gold-700 whitespace-nowrap pl-1">
+              ★ Free Trial Class
+            </a>
+          </nav>
         </div>
       </div>
 
