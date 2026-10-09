@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { tier2Data } from "@/data/tier2-data";
-import { GraduationCap, Phone, MessageCircle, Menu, X, ArrowRight, Sparkles } from "lucide-react";
+import { GraduationCap, Phone, MessageCircle, Menu, X, ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
 
 export default function Tier2Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -54,20 +54,33 @@ export default function Tier2Navbar() {
       <header className="sticky top-0 z-40 bg-navy-900 border-b-2 border-gold-500 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo */}
-            <Link href="/tier-2" className="flex items-center gap-2.5 sm:gap-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-navy-950 border border-gold-500/40 text-gold-400 flex items-center justify-center font-bold shadow flex-shrink-0">
-                <GraduationCap className="w-6 h-6" />
-              </div>
-              <div>
-                <span className="text-lg sm:text-xl font-bold font-display text-white block leading-tight">
-                  {tier2Data.name}
-                </span>
-                <span className="text-[9px] sm:text-[10px] font-bold text-gold-400 uppercase tracking-wider sm:tracking-widest">
-                  Quality Neighborhood Coaching
-                </span>
-              </div>
-            </Link>
+            {/* Logo + Mobile Back button on subpages */}
+            <div className="flex items-center gap-2">
+              {pathname !== "/tier-2" && (
+                <Link
+                  href="/tier-2"
+                  aria-label="Back to Tier 2 Home"
+                  className="flex items-center gap-1 text-gold-400 hover:text-white px-2 py-1.5 rounded-lg bg-navy-950/80 border border-gold-500/40 text-xs font-bold transition-all shadow-xs"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span className="text-[11px] font-semibold sm:hidden">Back</span>
+                </Link>
+              )}
+
+              <Link href="/tier-2" className="flex items-center gap-2.5 sm:gap-3">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-navy-950 border border-gold-500/40 text-gold-400 flex items-center justify-center font-bold shadow flex-shrink-0">
+                  <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div>
+                  <span className="text-base sm:text-xl font-bold font-display text-white block leading-tight">
+                    {tier2Data.name}
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-gold-400 uppercase tracking-wider sm:tracking-widest">
+                    Quality Neighborhood Coaching
+                  </span>
+                </div>
+              </Link>
+            </div>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-2">

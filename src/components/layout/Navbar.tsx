@@ -13,6 +13,7 @@ import {
   Clock,
   Sparkles,
   ChevronDown,
+  ArrowLeft,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import DemoModal from "@/components/ui/DemoModal";
@@ -77,20 +78,33 @@ export default function Navbar() {
       <header className="sticky top-0 z-40 bg-navy-900 border-b-2 border-gold-500 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-navy-950 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow group-hover:border-gold-400 transition-colors flex-shrink-0">
-                <GraduationCap className="w-6 h-6 sm:w-7 sm:h-7" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg sm:text-2xl font-bold font-display tracking-tight text-white leading-tight">
-                  {siteConfig.shortName}
-                </span>
-                <span className="text-[9px] sm:text-[10px] font-bold text-gold-400 tracking-wider sm:tracking-widest uppercase line-clamp-1">
-                  Academy of Excellence • Estd. {siteConfig.foundedYear}
-                </span>
-              </div>
-            </Link>
+            {/* Logo + Mobile Back button on subpages */}
+            <div className="flex items-center gap-2">
+              {pathname !== "/" && (
+                <Link
+                  href="/"
+                  aria-label="Back to Home"
+                  className="flex items-center gap-1 text-gold-400 hover:text-white px-2 py-1.5 rounded-lg bg-navy-950/80 border border-gold-500/40 text-xs font-bold transition-all shadow-xs"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span className="text-[11px] font-semibold sm:hidden">Back</span>
+                </Link>
+              )}
+
+              <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg bg-navy-950 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow group-hover:border-gold-400 transition-colors flex-shrink-0">
+                  <GraduationCap className="w-5 h-5 sm:w-7 sm:h-7" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-base sm:text-2xl font-bold font-display tracking-tight text-white leading-tight">
+                    {siteConfig.shortName}
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-gold-400 tracking-wider sm:tracking-widest uppercase line-clamp-1">
+                    Academy of Excellence • Estd. {siteConfig.foundedYear}
+                  </span>
+                </div>
+              </Link>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2">

@@ -64,8 +64,8 @@ export const tier2Data: Tier2CenterData = {
   tagline: "Quality Neighborhood Coaching for School Excellence & Boards",
   description:
     "A dedicated 3-mentor coaching center focused on Grades 8 to 12. Small batches, weekly diagnostic tests, and dedicated doubt desks to help local students top their school exams.",
-  phone: "+91 98221 44556",
-  whatsapp: "919822144556",
+  phone: "123456789",
+  whatsapp: "123456789",
   email: "contact@zenithtutorials.in",
   address: "Shop 12-14, 1st Floor, City Center Plaza, Sector 15",
   timings: "Mon - Sat: 3:00 PM - 8:30 PM | Sun: 9:00 AM - 1:00 PM (Tests)",
