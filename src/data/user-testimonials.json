@@ -1,0 +1,67 @@
+[
+  {
+    "id": "rev-1",
+    "author": "Dr. Sandeep Malhotra",
+    "role": "Parent",
+    "studentName": "Kabir Malhotra (Class 10 - 98.8%)",
+    "gradeOrExam": "Parent of Class 10 Topper",
+    "content": "As a working parent, my biggest worry was whether Kabir was getting individual attention. The weekly progress updates, biometric attendance alerts, and dedicated doubt teachers gave us immense peace of mind. Truly exceptional faculty.",
+    "rating": 5,
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+    "highlight": "Exceptional individual attention and parent transparency",
+    "createdAt": "2 days ago",
+    "verified": true
+  },
+  {
+    "id": "rev-2",
+    "author": "Pooja & Vikram Sharma",
+    "role": "Parent",
+    "studentName": "Aarav Sharma (Class 12 - 99.2%)",
+    "gradeOrExam": "Parents of Class 12 State Ranker",
+    "content": "Other commercial coaching factories put 100 students in one room where back-benchers are ignored. Here, the batch size was strictly 15 students. The teachers knew my son's exact weaknesses and worked on them weekly.",
+    "rating": 5,
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
+    "highlight": "Strict small batches unlike overcrowded mass coaching",
+    "createdAt": "1 week ago",
+    "verified": true
+  },
+  {
+    "id": "rev-3",
+    "author": "Rhea Sen",
+    "role": "Student",
+    "studentName": "",
+    "gradeOrExam": "NEET AIR 284 (Now at AIIMS)",
+    "content": "The formula books and biology diagrams provided by Apex are gold. Whenever I was confused with tough physics mechanics problems, Sir would sit with me after class until I solved it on the board myself.",
+    "rating": 5,
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80",
+    "highlight": "Dedicated doubt clearing that never leaves you behind",
+    "createdAt": "2 weeks ago",
+    "verified": true
+  },
+  {
+    "id": "rev-4",
+    "author": "Sunita Deshmukh",
+    "role": "Parent",
+    "studentName": "Ananya Deshmukh (IIT Bombay)",
+    "gradeOrExam": "Parent of JEE Advanced Achiever",
+    "content": "The institute doesn't just teach syllabus, they build character and mental toughness. My daughter was always inspired by her mentors. I recommend them to every parent in our school circle.",
+    "rating": 5,
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+    "highlight": "Builds real confidence and mental resilience",
+    "createdAt": "1 month ago",
+    "verified": true
+  },
+  {
+    "id": "rev-5",
+    "author": "Karan Singhania",
+    "role": "Student",
+    "studentName": "",
+    "gradeOrExam": "Class 10 CBSE (96.4%)",
+    "content": "I used to be terrified of trigonometry and quadratic equations. Sir's step-by-step shortcuts and weekly Sunday mock tests completely removed my exam fear.",
+    "rating": 5,
+    "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80",
+    "highlight": "Trigonometry and algebra made crystal clear",
+    "createdAt": "1 month ago",
+    "verified": true
+  }
+]
